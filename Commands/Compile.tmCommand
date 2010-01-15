@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveModifiedFiles</string>
+	<key>command</key>
+	<string>#! /usr/bin/env python
+
+import os, sys
+
+try:
+	selected_files = os.environ['TM_SELECTED_FILES'].split(' ')
+except KeyError:
+	print 'No files selected.'
+	sys.exit()
+
+if len(selected_files) == 0:
+	print 'No files selected.'
+
+try:
+	closure = os.environ['TM_CLOSURE_COMPILER_LOCATION']
+except KeyError:
+	print 'Unable to find a path for your Closure Compiler in "Preferences...".'
+	sys.exit()
+
+if not os.path.isfile(closure):
+	print 'Unable to find your Closure Compiler file.'
+	sys.exit()
+
+compressed = []
+for f in selected_files:
+	f = (f[1:-1])				 # Remove quotes
+	if not os.path.isfile(f):
+		continue
+	if not f.lower().endswith('js'):
+		continue
+	f_split = f.rpartition('/')  # Extract the path and filename
+	if f_split[0] is '':
+		continue
+	path = (f_split[0] + f_split[1]).replace(' ', '\\ ')
+	in_fn = f_split[2].replace(' ', '\\ ')
+	cmd = 'java -jar ' + closure.replace(' ', '\\ ') + ' --js ' + path + (in_fn[:-3] + '' + in_fn[-3:]) + ' --js_output_file '
+
+	# Create the output filename
+	out_fn = path + (in_fn[:-3] + '.compiled' + in_fn[-3:]).replace(' ', '\\ ')
+	cmd = cmd + out_fn
+	os.system(cmd)
+	compressed.append([f, out_fn])
+
+if len(compressed) &gt; 0:
+	msg = 'The following files were compiled:\n'
+	for i, f in enumerate(compressed):
+		msg = msg + str(i + 1) + '. ' + f[0] + '\n'
+		msg = msg + '   to ' + f[1] + '\n\n'
+else:
+	msg = 'No files were compiled.'
+print msg</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^G</string>
+	<key>name</key>
+	<string>Compile</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>uuid</key>
+	<string>1AB369DE-512C-4884-BB9C-079F2A9A2C87</string>
+</dict>
+</plist>

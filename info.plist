@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmail</key>
+	<string>thereis@nouincolor.com</string>
+	<key>contactName</key>
+	<string>Oskar Krawczyk</string>
+	<key>description</key>
+	<string>
+		&lt;a href="http://nouincolor.com/textmate/bundles/closure-compiler" title=""&gt;TextMate Closure Compiler Bundle&lt;/a&gt; is based on &lt;a href="http://experienceinternet.co.uk/blog/archive/yui-compressor-textmate-bundle/" title="Find out more about the TextMate YUI Compressor Bundle"&gt;YUI Compressor Bundle&lt;/a&gt;.</string>
+	<key>name</key>
+	<string>Closure Compiler</string>
+	<key>uuid</key>
+	<string>484752F8-A55B-4CEA-9C67-0195E2DDFFB6</string>
+</dict>
+</plist>
