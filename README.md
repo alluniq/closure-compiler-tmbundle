@@ -1,7 +1,7 @@
 TextMate Closure Compiler Bundle
 ================================
 
-TextMate Closure Compiler Bundle allows you to quickly compile a JavaScript file with a specified key shortcut. Compiled files are saved as `{original filename}.compiled.js`
+TextMate Closure Compiler Bundle allows you to quickly compile a JavaScript file with a specified key shortcut. Compiled files are saved as `original_filename.compiled.js`
 
 Setting up
 ----------
@@ -12,4 +12,4 @@ Setting up
 Usage
 -----
 
-Select a bunch of files from TextMate's Drawer and hit `Ctrl + Shift + G` - all selected files will be compiled and saved as `{original filename}.compiled.js` in the same directory.
+Select a bunch of files from TextMate's Drawer and hit `Ctrl + Shift + G` - all selected files will be compiled and saved as `original_filename.compiled.js` in the same directory.
