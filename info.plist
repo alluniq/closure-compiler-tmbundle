@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>contactEmail</key>
-	<string>thereis@nouincolor.com</string>
+	<string>o.krawczyk@alluniq.com</string>
 	<key>contactName</key>
 	<string>Oskar Krawczyk</string>
 	<key>description</key>
 	<string>
-		&lt;a href="http://nouincolor.com/textmate/bundles/closure-compiler" title=""&gt;TextMate Closure Compiler Bundle&lt;/a&gt; is based on &lt;a href="http://experienceinternet.co.uk/blog/archive/yui-compressor-textmate-bundle/" title="Find out more about the TextMate YUI Compressor Bundle"&gt;YUI Compressor Bundle&lt;/a&gt;.</string>
+		&lt;a href="http://alluniq.com/projects/closure-compiler" title=""&gt;TextMate Closure Compiler Bundle&lt;/a&gt; is loosely based on &lt;a href="http://experienceinternet.co.uk/blog/archive/yui-compressor-textmate-bundle/" title="Find out more about the TextMate YUI Compressor Bundle"&gt;YUI Compressor Bundle&lt;/a&gt;.</string>
 	<key>name</key>
 	<string>Closure Compiler</string>
 	<key>uuid</key>
